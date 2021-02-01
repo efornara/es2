@@ -1,0 +1,4 @@
+A pair of files (es2.h and es2.c) that can be included in C/C++ projects,
+making it easy to select OpenGL 2.1 or OpenGL ES 2.0 at runtime.
+
+Very permissive license (http://unlicense.org/).
