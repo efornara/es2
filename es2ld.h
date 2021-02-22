@@ -1,5 +1,5 @@
 /*
-  es2.h
+  es2ld.h
   Written by Emanuele Fornara
 
   This is free and unencumbered software released into the public domain.
@@ -28,8 +28,8 @@
   For more information, please refer to <http://unlicense.org/>
  */
 
-#ifndef ES2_H
-#define ES2_H
+#ifndef ES2LD_H
+#define ES2LD_H
 
 #include <GLES2/gl2.h>
 
@@ -38,8 +38,8 @@ extern "C" {
 #endif
 
 typedef void *(*ES2_FN_GetProcAddress)(const char *name);
-extern void es2_init(ES2_FN_GetProcAddress get_proc_address, int is_es2);
-extern int es2;
+extern void es2_init(ES2_FN_GetProcAddress get_proc_address, int is_es2_);
+extern int is_es2;
 
 typedef void (*ES2_FN_glActiveTexture)(GLenum texture);
 typedef void (*ES2_FN_glAttachShader)(GLuint program, GLuint shader);
@@ -477,4 +477,4 @@ extern ES2_FN_glRenderbufferStorageMultisample es2_fn_glRenderbufferStorageMulti
 }
 #endif
 
-#endif /* ES2_H */
+#endif /* ES2LD_H */

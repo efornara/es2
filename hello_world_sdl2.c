@@ -33,7 +33,7 @@
 
 #include <SDL2/SDL.h>
 
-#include "es2.h"
+#include "es2ld.h"
 
 void usage() {
 	fprintf(stderr, "usage: hello_world_sdl2 [es2|gl2]\n");

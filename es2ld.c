@@ -1,5 +1,5 @@
 /*
-  es2.c
+  es2ld.c
   Written by Emanuele Fornara
 
   This is free and unencumbered software released into the public domain.
@@ -28,9 +28,9 @@
   For more information, please refer to <http://unlicense.org/>
  */
 
-#include "es2.h"
+#include "es2ld.h"
 
-int es2 = 0;
+int is_es2 = 0;
 
 ES2_FN_glActiveTexture es2_fn_glActiveTexture = 0;
 ES2_FN_glAttachShader es2_fn_glAttachShader = 0;
@@ -176,8 +176,8 @@ ES2_FN_glVertexAttribPointer es2_fn_glVertexAttribPointer = 0;
 ES2_FN_glViewport es2_fn_glViewport = 0;
 ES2_FN_glRenderbufferStorageMultisample es2_fn_glRenderbufferStorageMultisample = 0;
 
-void es2_init(ES2_FN_GetProcAddress get_proc_address, int is_es2) {
-  es2 = is_es2;
+void es2_init(ES2_FN_GetProcAddress get_proc_address, int is_es2_) {
+  is_es2 = is_es2_;
   es2_fn_glActiveTexture = (ES2_FN_glActiveTexture)get_proc_address("glActiveTexture");
   es2_fn_glAttachShader = (ES2_FN_glAttachShader)get_proc_address("glAttachShader");
   es2_fn_glBindAttribLocation = (ES2_FN_glBindAttribLocation)get_proc_address("glBindAttribLocation");
