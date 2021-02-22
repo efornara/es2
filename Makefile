@@ -1,6 +1,5 @@
 # Makefile
 
-CC = gcc
 CFLAGS = -ansi -Wall -ggdb
 LDFLAGS = -ggdb
 OBJS = hello_world_sdl2.o es2ld.o
@@ -8,7 +7,7 @@ OBJS = hello_world_sdl2.o es2ld.o
 all: hello_world_sdl2
 
 clean:
-	rm -f *.o hello_world_sdl2
+	rm -f *.o *.exe hello_world_sdl2
 
 hello_world_sdl2: $(OBJS)
 	$(CC) $(LDFLAGS) -o hello_world_sdl2 $(OBJS) `sdl2-config --libs`

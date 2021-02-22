@@ -1,2 +1,3 @@
 *.o
+*.exe
 hello_world_sdl2
